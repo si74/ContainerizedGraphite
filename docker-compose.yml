@@ -1,0 +1,17 @@
+version: '2'
+services:
+  collectd:
+    image: <YOUR_IMAGE_NAME>/collectd:latest
+    environment:
+        - HOST_NAME=localhost
+        - GRAPHITE_HOST=graphite
+        - GRAPHITE_PORT=2003
+  graphite:
+    image: nickstenning/graphite:latest
+    expose:
+      - "80"
+      - "2003"
+      - "2004"
+      - "7002"
+    ports:
+      - "80:80"
