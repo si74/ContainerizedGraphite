@@ -1,7 +1,7 @@
 version: '2'
 services:
   collectd:
-    image: <YOUR_IMAGE_NAME>/collectd:latest
+    image: singuva/collectd:latest
     environment:
         - HOST_NAME=localhost
         - GRAPHITE_HOST=graphite
